@@ -8,6 +8,7 @@ User Entity,
 User Repository,
 User Security Configuration
 All the required dependencies are injected into pom.xml file in application.
+
 2 APIs
 - http://localhost:8095/api/user/register
 - http://localhost:8095/api/user/fetch/Rishi Patel
