@@ -1,0 +1,17 @@
+spring.application.name=UserRegistrationApp
+server.port=8097
+
+#DB properties
+spring.datasource.url=jdbc:mysql://localhost:3306/user_demo?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=Rushikesh@265
+
+# JPA properties
+spring.jpa.show-sql = true
+spring.jpa.hibernate.ddl-auto = update
+#Disable open session in view
+spring.jpa.open-in-view=false
+
+#swagger api
+#springdoc.api-docs.path=/userDetails-docs
+#springdoc.swagger-ui.path=/userDetails-ui

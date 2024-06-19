@@ -1,0 +1,5 @@
+package com.example.UserRegistrationApp.Entity;
+
+public class User {
+
+}

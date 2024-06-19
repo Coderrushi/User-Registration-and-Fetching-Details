@@ -1,0 +1,32 @@
+package com.example.UserRegistrationApp.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.UserRegistrationApp.Config.PasswordEncoder;
+import com.example.UserRegistrationApp.Entity.User;
+import com.example.UserRegistrationApp.Service.UserService;
+
+@RequestMapping("/api/user")
+@RestController
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @PostMapping("/addUser")
+    public User saveUser(@RequestBody User user) {
+        // Encode the user's password before saving
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+
+        return userService.addUser(user);
+    }
+}

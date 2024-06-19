@@ -1,0 +1,5 @@
+package com.example.UserRegistrationApp.Config;
+
+public class PasswordEncoder {
+
+}

@@ -1,0 +1,18 @@
+package com.example.UserRegistrationApp.Config;
+
+import java.security.SecureRandom;
+
+import org.springframework.context.annotation.Bean;
+
+public class PasswordEncoder {
+	@Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    public String encode(String passWord) {
+    	BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        return bCryptPasswordEncoder.encode(passWord);
+
+    }
+}

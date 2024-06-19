@@ -1,0 +1,14 @@
+spring.application.name=UserRegistrationApp
+server.port=8085
+
+spring.jpa.hibernate.ddl-auto=create
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.datasource.url=jdbc:mysql://localhost:3306/UserRegisterDB?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=Rushikesh@265
+
+#jpa vendor adapter configuration
+spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
